@@ -4,16 +4,27 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  height: 60vh;
+  gap: 10px;
+  color: black;
   /* gap: 1rem; */
 }
 img {
   margin-top: 1rem;
   max-width: 100%;
   width: 220px;
+  border-radius: 25%;
+  -webkit-border-radius: 25%;
+  -moz-border-radius: 25%;
+  -ms-border-radius: 25%;
+  -o-border-radius: 25%;
+}
+h1 {
+  font-size: 19px;
 }
 
 .button {
   padding: 1rem;
-  background-color: black;
+  background-color: rgb(27, 19, 19);
   color: white;
 }

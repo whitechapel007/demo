@@ -1,5 +1,14 @@
 .list {
   display: flex;
+  justify-content: center; /* add this */
 
   gap: 1rem;
+}
+
+button {
+  padding: 15px;
+  color: white;
+  border: 0;
+  background-color: rgb(117, 117, 175);
+  font-size: 19px;
 }

@@ -1,6 +1,13 @@
 import React from "react";
 import "./pagination.css";
-const Pagination = ({ postsPerPage, totalPosts, paginate, prev, next }) => {
+const Pagination = ({
+  postsPerPage,
+  totalPosts,
+  paginate,
+  prev,
+  next,
+  posts,
+}) => {
   const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
@@ -10,14 +17,16 @@ const Pagination = ({ postsPerPage, totalPosts, paginate, prev, next }) => {
     <nav>
       <ul className="list">
         <>
-          <button onClick={prev}>prev</button>
+          {posts && <button onClick={prev}>prev</button>}
           {pageNumbers.map((item) => (
             <li key={item}>
               {" "}
-              <button onClick={() => paginate(item)}>{item}</button>{" "}
+              <button onClick={() => paginate(item)} className="num">
+                {item}
+              </button>{" "}
             </li>
           ))}
-          <button onClick={next}>next</button>
+          {posts && <button onClick={next}>next</button>}
         </>
       </ul>
     </nav>

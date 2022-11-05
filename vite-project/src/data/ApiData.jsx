@@ -34,13 +34,16 @@ const ApiData = () => {
               </Link>
             ))}
         </div>
-        <Pagination
-          postsPerPage={postsPerPage}
-          totalPosts={data.length}
-          paginate={paginate}
-          prev={handlePrev}
-          next={handleNext}
-        />
+        {paginatedPosts && (
+          <Pagination
+            postsPerPage={postsPerPage}
+            totalPosts={data.length}
+            paginate={paginate}
+            prev={handlePrev}
+            next={handleNext}
+            posts={paginatedPosts}
+          />
+        )}
       </section>
     </div>
   );
